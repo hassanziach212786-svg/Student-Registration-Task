@@ -1,0 +1,79 @@
+﻿@model Task1.Models.Stdform
+<style>
+    body {
+        background-color: indianred;
+    }
+
+    form {
+        background-color: #8B0000;
+        padding: 30px;
+        border-radius: 15px;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        display: flex;
+        flex-direction: column;
+    }
+
+    input, textarea {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        background-color: white;
+        color: indianred;
+    }
+
+</style>
+<h2>New Registration</h2>
+
+<form asp-action="Create" method="post">
+
+    <label>Full Name</label>
+    <input asp-for="FullName" /><br /><br />
+
+    <label>Father Name</label>
+    <input asp-for="FatherName" /><br /><br />
+
+    <label>Email</label>
+    <input asp-for="Email" /><br /><br />
+
+    <label>Phone</label>
+    <input asp-for="Phone" /><br /><br />
+
+    <label>CNIC</label>
+    <input asp-for="CNIC" /><br /><br />
+
+    <label>Date of Birth</label>
+    <input asp-for="DOB" type="date" /><br /><br />
+
+    <label>Gender</label>
+    <select asp-for="Gender">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+    </select><br /><br />
+
+    <label>Degree</label>
+    <input asp-for="Degree" /><br /><br />
+
+    <label>Semester</label>
+    <input asp-for="Semester" /><br /><br />
+
+    <label>Address</label>
+    <textarea asp-for="Address"></textarea><br /><br />
+
+    <button type="submit">Save</button>
+</form>
